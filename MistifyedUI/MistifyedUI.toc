@@ -1,0 +1,9 @@
+## Interface: 50100
+## Title: |cff990099MistifyedUI|r
+## Notes:
+## Version: 1.0
+## Author: Mistify
+## RequiredDeps: MistifyedUI_Config, Tukui
+## X-oUF: oUFTukui
+
+MistifyedUI_Loader.xml

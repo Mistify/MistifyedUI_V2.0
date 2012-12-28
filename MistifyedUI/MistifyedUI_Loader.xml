@@ -1,0 +1,19 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+
+	<Script file="Modules\Unitframes\Player.lua" />
+	<Script file="Modules\Unitframes\Target.lua" />
+	<Script file="Modules\Unitframes\Tot.lua" />
+	<Script file="Modules\Unitframes\Boss.lua" />
+	<Script file="Modules\Unitframes\Pet.lua" />
+	<Script file="Modules\Unitframes\Layout.lua" />
+	<Script file="Modules\Chat\Chat.lua" />
+	<Script file="Modules\Actionbars\Actionbars.lua" />
+	<Script file="Modules\Raidframes\Raidframes.lua" />
+	<Script file="Modules\Minimap\Minimap.lua" />
+	<Script file="Modules\Classbars\Classbars.lua" />
+	<Script file="core\templates.lua"/>
+	<Script file="core\launch.lua" />
+
+
+<Include file="Classbars\load_classbars.xml"/>
+</Ui>
