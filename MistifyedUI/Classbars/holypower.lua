@@ -6,7 +6,7 @@ local self = _G["TukuiPlayer"]
 self.HolyPower:ClearAllPoints()
 self.HolyPower:SetPoint("BOTTOMLEFT", self, "TOPLEFT", 0, 6)
 self.HolyPower:Size(self:GetWidth(), 6)
-self.HolyPower:CreateBorder()
+
 
 if P.level ~= MAX_PLAYER_LEVEL then
 	for i = 1, 3 do

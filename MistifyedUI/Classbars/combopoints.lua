@@ -16,7 +16,7 @@ local cpoints = CreateFrame("Frame", "TukuiComboPoints", UIParent)
 cpoints:Width(TukuiPlayer:GetWidth())
 cpoints:Height(8)
 cpoints:Point("BOTTOMLEFT", TukuiPlayer, "TOPLEFT", 0, 6)
-cpoints:CreateBorder()
+
 cpoints:SetFrameLevel(10)
 
 local points = {}

@@ -6,7 +6,7 @@ local self = _G["TukuiPlayer"]
 self.HarmonyBar:ClearAllPoints()
 self.HarmonyBar:SetPoint("BOTTOMLEFT", self, "TOPLEFT", 0, 6)
 self.HarmonyBar:Size(self:GetWidth(), 6)
-self.HarmonyBar:CreateBorder()
+
 
 local maxChi = UnitPowerMax("player", SPELL_POWER_LIGHT_FORCE)
 

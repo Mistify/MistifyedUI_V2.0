@@ -6,7 +6,7 @@ self = _G["TukuiPlayer"]
 self.ShadowOrbsBar:ClearAllPoints()
 self.ShadowOrbsBar:SetPoint("BOTTOMLEFT", self, "TOPLEFT", 0, 6)
 self.ShadowOrbsBar:Size(self:GetWidth(), 6)
-self.ShadowOrbsBar:CreateBorder()
+
 
 for i = 1, 3 do
 	self.ShadowOrbsBar[i]:Size((self:GetWidth() / 3) - 1, 6)

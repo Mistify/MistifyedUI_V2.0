@@ -13,5 +13,5 @@ for i = 1, 4 do
 		self.TotemBar[i]:Point("LEFT", self.TotemBar[i - 1], "RIGHT", 9, 0)
 	end
 
-	self.TotemBar[i]:CreateBorder()
+
 end

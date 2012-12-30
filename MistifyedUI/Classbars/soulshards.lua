@@ -4,7 +4,7 @@ if P.myclass ~= "WARLOCK" or C.unitframes.classbar ~= true then return end
 self = _G["TukuiPlayer"]
 
 self.WarlockSpecBars:ClearAllPoints()
-self.WarlockSpecBars:SetPoint("BOTTOMLEFT", self, "TOPLEFT", 0, 6)
+self.WarlockSpecBars:SetPoint("BOTTOMLEFT", self, "TOPLEFT", 0, 1)
 self.WarlockSpecBars:Size(self:GetWidth(), 3)
 
 

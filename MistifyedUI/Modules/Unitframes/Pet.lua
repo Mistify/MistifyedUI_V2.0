@@ -15,7 +15,7 @@ local health = TukuiPet.Health
 local power = TukuiPet.Power
 local healthBG = TukuiPet.Health.bg
 local name = TukuiPet.Name
-
+local font = C.media.pixelfont
 
 ---------------------------------------------------------------------------------------------
 -- not needed
@@ -31,10 +31,19 @@ end
 -- health
 ---------------------------------------------------------------------------------------------
 do
-	health:SetHeight( 16 )
+	health:SetHeight( 24 )
 
 
-	name:SetFont( C["media"].uffont, 12 )
+health.bg:SetVertexColor(.25, .1, .1)
+health.bg:SetTexture(C["media"].blank)
+health:SetStatusBarTexture(C.media.normTex)
+health:SetStatusBarColor(.1, .1, .1)
+
+
+
+
+
+	name:SetFont( C.media.pixelfont, 12 )
 	name:SetParent( health )
 	name:ClearAllPoints()
 	name:SetPoint( "CENTER", health, "CENTER", 0, 0 )
@@ -49,8 +58,8 @@ end
 -- power
 ---------------------------------------------------------------------------------------------
 do
-	power:SetHeight( 8 )
-	power:Point( "TOPLEFT", health, "BOTTOMLEFT", 7, 2 )
+	power:SetHeight( 3 )
+	power:Point( "TOPLEFT", health, "BOTTOMLEFT", 7, 4 )
 	power:Point( "TOPRIGHT", health, "BOTTOMRIGHT", -7, 0 )
 	power:SetFrameLevel( health:GetFrameLevel() + 1 )
 	
@@ -59,5 +68,5 @@ end
 -- size
 ---------------------------------------------------------------------------------------------
 
-unit:Size( 130, 16 )
+unit:Size( 130, 24 )
 
