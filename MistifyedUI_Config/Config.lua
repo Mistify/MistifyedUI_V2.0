@@ -171,13 +171,13 @@ C["castbar"] = {
 
 C["datatext"] = {
 	["bags"] = 0,
-	["fps_ms"] = 1,
-	["system"] = 2,
-	["gold"] = 6,
+	["fps_ms"] = 6,
+	["system"] = 5,
+	["gold"] = 4,
 	["wowtime"] = 8,
-	["guild"] = 4,
+	["guild"] = 1,
 	["dur"] = 3,
-	["friends"] = 5,
+	["friends"] = 2,
 	["power"] = 0,
 	["haste"] = 0,
 	["crit"] = 0,
@@ -186,28 +186,28 @@ C["datatext"] = {
 	["battleground"] = false,
 	["time24"] = false,
 	["localtime"] = true,
-	["fontsize"] = 12,
+	["fontsize"] = 13,
 	["exprepbars"] = true,								-- enable experience and reputation bar
 	["expreptext"] = true,								-- enable text on experience and reputation bars
 }
 
 C["actionbar"] = {
 	["enable"] = true,                                  -- enable tukui action bars
-	["hotkey"] = true,                                  -- enable hotkey display because it was a lot requested
+	["hotkey"] = false,                                  -- enable hotkey display because it was a lot requested
 	["showgrid"] = true,                                -- show grid on empty button
-	["buttonsize"] = 30,                                -- normal buttons size
+	["buttonsize"] = 27,                                -- normal buttons size
 	["petbuttonsize"] = 27,                             -- pet & stance buttons size
 	["buttonspacing"] = 4,                              -- buttons spacing
-	["vertical_rightbars"] = false,						-- vertical or horizontal right bars
+	["vertical_rightbars"] = true,						-- vertical or horizontal right bars
 	["ownshdbar"] = true,                              -- use a complete new stance bar for shadow dance (rogue only)
 	["mainswap"] = false,
 	["micromenumouseover"] = true,
 	["micromenu"] = false,
-	["vertical_shapeshift"] = true,	
+	["vertical_shapeshift"] = false,	
 }
 
 C["chat"] = {
-	["background"] = true,
+	["background"] = false,
 	["width"] = 378,
 	["height"] = 175,
 	["justifyRight"] = false,

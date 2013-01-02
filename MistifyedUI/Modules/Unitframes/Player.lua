@@ -33,7 +33,7 @@ end
 -- health
 ---------------------------------------------------------------------------------------------
 do
-	health:SetHeight( 30 )
+	health:SetHeight( 27 )
 
 self.Health.bg:SetVertexColor(.25, .1, .1)
 self.Health.bg:SetTexture(C["media"].blank)
@@ -84,10 +84,10 @@ end
 -- experience and reputation bar
 ---------------------------------------------------------------------------------------------
 if( T.level ~= MAX_PLAYER_LEVEL ) then
-	Experience:Width( TukuiChatBackgroundRight:GetWidth() -8)
+	Experience:Width( 240)
 	Experience:Height( 5 )
 	Experience:ClearAllPoints()
-	Experience:Point( "TOP", TukuiChatBackgroundRight, "TOP", 0, 2 )
+	Experience:Point( "LEFT", TukuiInfoLeft, "RIGHT", 8, 0 )
 	Experience:SetFrameLevel( 2 )
 	Experience:SetAlpha( 1 )
 	Experience:HookScript( "OnLeave", function( self ) self:SetAlpha( 1 ) end )
@@ -101,10 +101,10 @@ if( T.level ~= MAX_PLAYER_LEVEL ) then
 end
 
 if( T.level == MAX_PLAYER_LEVEL ) then
-	Reputation:Width( TukuiChatBackgroundLeft:GetWidth() -4)
-	Reputation:Height( 7 )
+	Reputation:Width( 240)
+	Reputation:Height( 5 )
 	Reputation:ClearAllPoints()
-	Reputation:Point( "TOP", TukuiChatBackgroundLeft, "BOTTOM", 0, -11 )
+	Reputation:Point( "LEFT", TukuiInfoLeft, "RIGHT", 8, 0 )
 	Reputation:SetFrameLevel( 2 )
 	Reputation:SetAlpha( 1 )
 	Reputation:HookScript( "OnLeave", function( self ) self:SetAlpha( 1 ) end )
@@ -116,6 +116,7 @@ if( T.level == MAX_PLAYER_LEVEL ) then
 	Reputation.bg:SetFrameLevel(1)
 end
 
+-----------------------------------------------------------------
 ---------------------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------------------
@@ -123,7 +124,7 @@ end
 ---------------------------------------------------------------------------------------------
 
 -- unit:Size( 246, 30 )
-unit:SetHeight( 30 )
+unit:SetHeight( 27)
 
 
 

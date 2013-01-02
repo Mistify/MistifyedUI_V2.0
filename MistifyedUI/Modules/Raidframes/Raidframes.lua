@@ -18,7 +18,7 @@ P.RaidFrameAttributes = function()
 		self:SetWidth(header:GetAttribute("initial-width"))
 		self:SetHeight(header:GetAttribute("initial-height"))
 	]],
-	"initial-width", P.Scale((TukuiChatBackgroundLeft:GetWidth()/ 5) - 5),
+	"initial-width", P.Scale((TukuiInfoRight:GetWidth()/ 5) - 5),
 	"initial-height", (28),
 	"showParty", true,
 	"showRaid", true,
@@ -108,7 +108,7 @@ P.PostUpdateRaidUnit = function(self)
 	
 
 	self.Power:ClearAllPoints()
-	self.Power:Height(3)
+	self.Power:Height(2)
 	self.Power:SetWidth(55)
 	
 	self.Power:Point("TOP", self.Health, "BOTTOM", 0, 4)
@@ -156,7 +156,8 @@ RaidPosition:SetScript("OnEvent", function(self, event)
 	end
 
 	G.UnitFrames.RaidUnits:ClearAllPoints()
-	G.UnitFrames.RaidUnits:SetPoint("BOTTOMLEFT", TukuiChatBackgroundLeft, "TOPLEFT", 2, 18)
+	G.UnitFrames.RaidUnits:SetPoint("BOTTOMLEFT", TukuiInfoRight, "TOPLEFT", 2, 6)
 end)
+
 
 

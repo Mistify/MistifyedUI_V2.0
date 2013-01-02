@@ -30,9 +30,9 @@ if T.lowversion then
 	tot:Point("BOTTOMRIGHT", TukuiTarget, "BOTTOMLEFT", -4, 0)
 	pet:Point("BOTTOM", TukuiTargetTarget, "TOP", 0, 6)
 else
-	player:Point("BOTTOM", UIParent, "BOTTOM", -250, 166)
-	target:Point("BOTTOM", UIParent, "BOTTOM",  250, 166)
-	tot:Point("BOTTOM", UIParent, "BOTTOM",  0, 210)
+	player:Point("BOTTOM", UIParent, "BOTTOM", -250, 195)
+	target:Point("BOTTOM", UIParent, "BOTTOM",  250, 195)
+	tot:Point("BOTTOM", UIParent, "BOTTOM",  0, 255)
 	pet:Point("TOPLEFT", TukuiPlayer, "BOTTOMLEFT", 0, -8)
 
 
