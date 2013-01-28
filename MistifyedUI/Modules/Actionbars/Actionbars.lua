@@ -14,7 +14,7 @@ local TukuiPanels = CreateFrame("Frame")
 
 
 	StanceBarFrame:ClearAllPoints() 
-	StanceBarFrame:SetPoint("TOPLEFT", TukuiInfoLeft, "BOTTOM", 0, -0)	
+	StanceBarFrame:SetPoint("BOTTOMLEFT", TukuiChatBackgroundLeft, "BOTTOMRIGHT", 0, 0)	
 
 
 	
@@ -46,16 +46,24 @@ end
 	ActionButton1:SetPoint("BOTTOM", UIParent, "BOTTOM", -77, 195)
 
 
-TukuiBar2:SetPoint("BOTTOMRIGHT", UIParent, "BOTTOM", 3, 87)
-TukuiBar3:SetPoint("BOTTOMLEFT", UIParent, "BOTTOM", -2, 87)
+TukuiBar2:SetPoint("BOTTOMRIGHT", UIParent, "BOTTOM", 3, 100)
+TukuiBar3:SetPoint("BOTTOMLEFT", UIParent, "BOTTOM", -2, 100)
 
 
-TukuiBar4:SetPoint("TOPLEFT", TukuiInfoRight, "BOTTOMLEFT", -2, -2)
+TukuiBar4:SetPoint("BOTTOM", UIParent, "BOTTOM", 0, -5000)
 
-TukuiBar5:SetPoint("TOPRIGHT", UIParent, "RIGHT", 500, 0)
-TukuiPetBar:SetPoint("RIGHT", UIParent, "RIGHT", -10, 0)
+TukuiBar5:SetPoint("RIGHT", UIParent, "RIGHT", -50, 0)
+TukuiPetBar:SetPoint("RIGHT", UIParent, "RIGHT", -20, 0)
 
 
 
 end)
+
+
+
+----------Hide some stuff
+
+if TukuiBar2Button then TukuiBar2Button :Hide()end
+if TukuiBar3Button then TukuiBar3Button :Hide()end
+if TukuiBar4Button then TukuiBar4Button :Hide()end
 

@@ -33,7 +33,7 @@ end
 -- health
 ---------------------------------------------------------------------------------------------
 do
-	health:SetHeight( 27 )
+	health:SetHeight( 25 )
 
 self.Health.bg:SetVertexColor(.25, .1, .1)
 self.Health.bg:SetTexture(C["media"].blank)
@@ -56,7 +56,7 @@ end
 -- power
 ---------------------------------------------------------------------------------------------
 do
-	self.Power:SetHeight(3)
+	self.Power:SetHeight(2)
 	power:Point( "TOPLEFT", health, "BOTTOMLEFT", 9, 4 )
 	power:Point( "TOPRIGHT", health, "BOTTOMRIGHT", -9, -6 )
 	power:SetFrameLevel( health:GetFrameLevel() + 1 )
@@ -87,7 +87,7 @@ if( T.level ~= MAX_PLAYER_LEVEL ) then
 	Experience:Width( 240)
 	Experience:Height( 5 )
 	Experience:ClearAllPoints()
-	Experience:Point( "LEFT", TukuiInfoLeft, "RIGHT", 8, 0 )
+	Experience:Point( "BOTTOM", UIParent, "BOTTOM", 0, 55 )
 	Experience:SetFrameLevel( 2 )
 	Experience:SetAlpha( 1 )
 	Experience:HookScript( "OnLeave", function( self ) self:SetAlpha( 1 ) end )
@@ -123,8 +123,8 @@ end
 -- size
 ---------------------------------------------------------------------------------------------
 
--- unit:Size( 246, 30 )
-unit:SetHeight( 27)
+-- unit:Size( 246, 25 )
+unit:SetHeight( 25)
 
 
 

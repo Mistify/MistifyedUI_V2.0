@@ -29,7 +29,7 @@ end
 -- health
 ---------------------------------------------------------------------------------------------
 do
-	health:SetHeight( 28 )
+	health:SetHeight( 25 )
 	
 
 
@@ -71,7 +71,7 @@ end
 -- power
 ---------------------------------------------------------------------------------------------
 do
-	power:SetHeight( 3 )
+	power:SetHeight( 2 )
 	power:Point( "TOPLEFT", health, "BOTTOMLEFT", 9, 4 )
 	power:Point( "TOPRIGHT", health, "BOTTOMRIGHT", -9, -6 )
 	power:SetFrameLevel( health:GetFrameLevel() + 1 )
@@ -144,4 +144,4 @@ end
 ---------------------------------------------------------------------------------------------
 
 -- unit:Size( 246, 28 )
-unit:SetHeight( 28 )
+unit:SetHeight( 25 )

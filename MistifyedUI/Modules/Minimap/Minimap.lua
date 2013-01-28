@@ -6,11 +6,16 @@
 
 local T, C, L, G = unpack( Tukui )
 
+local font = C.media.pixelfont
+
+
+
+
 if TukuiMinimapStatsLeft then TukuiMinimapStatsLeft:Hide()end
 
 TukuiMinimapStatsRight:ClearAllPoints()
 TukuiMinimapStatsRight:SetPoint("BOTTOM", TukuiMinimap, "BOTTOM", -0, -10)
-TukuiMinimapStatsRight:SetFrameLevel( 6 )
+TukuiMinimapStatsRight:SetFrameLevel( 4 )
 
 
 Minimap:SetParent(TukuiMinimap)
@@ -30,12 +35,14 @@ TukuiAurasPlayerBuffs:SetPoint("TOPRIGHT", TukuiMinimap, "TOPLEFT", -18, 0)
 TukuiWatchFrame:ClearAllPoints()
 TukuiWatchFrame:SetPoint ("TOPLEFT", UIParemt, "TOPLEFT", -0, -50)
 
+
+
+
 TukuiRaidUtilityShowButton:ClearAllPoints()
 TukuiRaidUtilityShowButton:SetPoint("TOP", UIParent, "TOP", -0, -10)
 
 TukuiRaidUtility:ClearAllPoints()
 TukuiRaidUtility:SetPoint("BOTTOM", TukuiRaidUtilityShowButton, "BOTTOM", -0, -100)
-
 
 
 

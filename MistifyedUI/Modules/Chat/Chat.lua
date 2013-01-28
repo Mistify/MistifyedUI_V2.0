@@ -3,53 +3,97 @@ local T, C, L, G = unpack( Tukui )
 
 local font = C.media.pixelfont
 
+
+
+
+
+
+
 -----Adding Outlines to Chat Fonts------
 ----------------------------------------
-ChatFrame1:SetFont(C.media.pixelfont, 13, "THINOUTLINE")
-ChatFrame2:SetFont(C.media.pixelfont, 13, "THINOUTLINE")
-ChatFrame4:SetFont(C.media.pixelfont, 13, "THINOUTLINE")
+ChatFrame1:SetFont(C.media.pixelfont, 13)
+ChatFrame1:SetShadowColor(0, 0, 0)
+ChatFrame1:SetShadowOffset(1.25, -1.25)
+
+
+
+
 
 
 -------Left Chat Area Setup-------
 -----------------------------------------
-TukuiInfoLeft:SetPoint("LEFT", UIParent, "BOTTOMLEFT", 150, 120)
+TukuiInfoLeft:StripTextures()
+
+TukuiChatBackgroundLeft:Height(145)
+
+if TukuiTabsLeftBackground then TukuiTabsLeftBackground :Hide()end
+
+TukuiInfoLeft:SetPoint("LEFT", UIParent, "BOTTOMLEFT", 50, 50)
+
+if TukuiLineToABLeft then TukuiLineToABLeft :Hide()end
+if TukuiLineToABLeftAlt then TukuiLineToABLeftAlt :Hide()end
+if TukuiInfoLeftLineVertical then TukuiInfoLeftLineVertical:Hide()end
+
+if TukuiCubeLeft then TukuiCubeLeft :Hide()end
 
 
-TukuiLineToABLeft:ClearAllPoints()
-TukuiLineToABLeft:SetWidth(636)
-TukuiLineToABLeft:SetPoint("LEFT", UIParent, "BOTTOMLEFT", 135, 120)
+T.SetDefaultChatPosition = function( frame )
+	if( frame ) then
+		local id = frame:GetID()
+		local name = FCF_GetChatWindowInfo( id )
+		local fontSize = select( 2, frame:GetFont() )
 
-TukuiInfoLeftLineVertical:ClearAllPoints()
-TukuiInfoLeftLineVertical:SetHeight(10)
-TukuiInfoLeftLineVertical:SetPoint("BOTTOM", TukuiLineToABLeft, "LEFT", 0,0)
+		if( fontSize < 12 ) then
+			FCF_SetChatWindowFontSize( nil, frame, 12 )
+		else
+			FCF_SetChatWindowFontSize( nil, frame, fontSize )
+		end
 
-local ileftlv = CreateFrame("Frame", "VertLineLeft", UIParent)
-ileftlv:SetTemplate()
-ileftlv:Size(2, 58)
-ileftlv:Point("LEFT", TukuiLineToABLeft, "RIGHT", 0, 0)
-ileftlv:SetFrameLevel(1)
-ileftlv:SetFrameStrata("BACKGROUND")
-G.Panels.BottomLeftVerticalLine = ileftlv
+		if( id == 1 ) then
+			frame:ClearAllPoints()
+			frame:Point( "TOPLEFT", G.Panels.LeftChatTabsBackground, "BOTTOMLEFT", 0, -2 )
+			frame:Point( "BOTTOMRIGHT", G.Panels.DataTextLeft, "TOPRIGHT", 0, 2 )
+		elseif( id == 4 and name == LOOT ) then
+			if( not frame.isDocked ) then
+				frame:ClearAllPoints()
+				FCF_SetLocked(ChatFrame4, 1)
+				FCF_DockFrame(ChatFrame4)
+			end
+		end
+		if( not frame.isLocked ) then
+			FCF_SetLocked( frame, 1 )
+		end
+	end
+end
+hooksecurefunc( "FCF_RestorePositionAndDimensions", T.SetDefaultChatPosition )
+
+
+
+
+
+
+
+
+
 
 
 -------Right Chat Area Setup-------
 -----------------------------------------
-TukuiInfoRight:SetPoint("RIGHT", UIParent, "BOTTOMRIGHT", -150, 120)
+if TukuiTabsRightBackground then TukuiTabsRightBackground :Hide()end
 
-TukuiLineToABRight:ClearAllPoints()
-TukuiLineToABRight:SetWidth(635)
-TukuiLineToABRight:SetPoint("RIGHT", UIParent, "BOTTOMRIGHT", -135, 120)
-
-TukuiInfoRightLineVertical:ClearAllPoints()
-TukuiInfoRightLineVertical:SetHeight(10)
-TukuiInfoRightLineVertical:SetPoint("BOTTOM", TukuiLineToABRight, "RIGHT", 0,0)
+if TukuiChatBackgroundRight then TukuiChatBackgroundRight :Hide()end
 
 
-local irightlv = CreateFrame("Frame", "VertLineRight", UIParent)
-irightlv:SetTemplate()
-irightlv:Size(2, 58)
-irightlv:Point("RIGHT", TukuiLineToABRight, "LEFT", 0, 0)
-irightlv:SetFrameLevel(1)
-irightlv:SetFrameStrata("BACKGROUND")
-G.Panels.BottomRightVerticalLine = irightlv
+if TukuiInfoRight then TukuiInfoRight:Hide()end
+
+
+
+
+if TukuiLineToABRight then TukuiLineToABRight :Hide()end
+if TukuiLineToABRightAlt then TukuiLineToABRightAlt :Hide()end
+if TukuiInfoRightLineVertical then TukuiInfoRightLineVertical:Hide()end
+
+if TukuiCubeRight then TukuiCubeRight :Hide()end
+
+
 

@@ -10,10 +10,10 @@
 	<Script file="Modules\Actionbars\Actionbars.lua" />
 	<Script file="Modules\Raidframes\Raidframes.lua" />
 	<Script file="Modules\Minimap\Minimap.lua" />
-	<Script file="Modules\Classbars\Classbars.lua" />
+<Script file="Classbars\classbars.lua" />
 	<Script file="core\templates.lua"/>
 	<Script file="core\launch.lua" />
+	<Script file="Misc\threatbar.lua" />
 
 
-<Include file="Classbars\load_classbars.xml"/>
 </Ui>

@@ -56,6 +56,8 @@ C["unitframes"] = {
 	["raidalphaoor"] = 0.4,
 	["perconly"] = false,
 	["iconspvp"] = true, 
+	["onlyselfdebuffs"] = true,
+
 }
 
 
@@ -98,8 +100,8 @@ C["classbar"] = {
 
 C["font"] = {
 	["font"] = true,
-	["datatextfontsize"] = 12,
-	["unitframefontsize"] = 12,
+	["datatextfontsize"] = 11,
+	["unitframefontsize"] = 11,
 	["nameplatefontsize"] = 12,
 	["skinfontsize"] = 12,
 	["chattabfontsize"] = 12,
@@ -126,7 +128,7 @@ C["raidframes"] = {
 C["tooltip"] = {
 	["enable"] = true,                                  -- true to enable this mod, false to disable
 	["ilvl"] = false,
-	["talent"] = false,
+	["talent"] = true,
 	["symbosis"] = false,
 	["icon"] = false,
 	["symbosis"] = false,
@@ -145,7 +147,7 @@ C["auras"] = {
 
 C["classtimer"] = {
 	["enable"] = false,											-- enable classtimer
-	["targetdebuffs"] = false,									-- target debuffs above target (looks crappy imo)
+	["targetdebuffs"] = true,									-- target debuffs above target (looks crappy imo)
 	["playercolor"] = {.2, .2, .2, 1 },							-- playerbarcolor
 	["targetbuffcolor"] = { 70/255, 150/255, 70/255, 1 },		-- targetbarcolor (buff)
 	["targetdebuffcolor"] = { 150/255, 30/255, 30/255, 1 },		-- targetbarcolor (debuff)
@@ -171,13 +173,13 @@ C["castbar"] = {
 
 C["datatext"] = {
 	["bags"] = 0,
-	["fps_ms"] = 6,
-	["system"] = 5,
-	["gold"] = 4,
+	["fps_ms"] = 1,
+	["system"] = 0,
+	["gold"] = 2,
 	["wowtime"] = 8,
-	["guild"] = 1,
+	["guild"] = 0,
 	["dur"] = 3,
-	["friends"] = 2,
+	["friends"] = 0,
 	["power"] = 0,
 	["haste"] = 0,
 	["crit"] = 0,
@@ -186,7 +188,7 @@ C["datatext"] = {
 	["battleground"] = false,
 	["time24"] = false,
 	["localtime"] = true,
-	["fontsize"] = 13,
+	["fontsize"] = 12,
 	["exprepbars"] = true,								-- enable experience and reputation bar
 	["expreptext"] = true,								-- enable text on experience and reputation bars
 }
@@ -195,8 +197,8 @@ C["actionbar"] = {
 	["enable"] = true,                                  -- enable tukui action bars
 	["hotkey"] = false,                                  -- enable hotkey display because it was a lot requested
 	["showgrid"] = true,                                -- show grid on empty button
-	["buttonsize"] = 27,                                -- normal buttons size
-	["petbuttonsize"] = 27,                             -- pet & stance buttons size
+	["buttonsize"] = 25,                                -- normal buttons size
+	["petbuttonsize"] = 25,                             -- pet & stance buttons size
 	["buttonspacing"] = 4,                              -- buttons spacing
 	["vertical_rightbars"] = true,						-- vertical or horizontal right bars
 	["ownshdbar"] = true,                              -- use a complete new stance bar for shadow dance (rogue only)
@@ -207,10 +209,9 @@ C["actionbar"] = {
 }
 
 C["chat"] = {
-	["background"] = false,
-	["width"] = 378,
-	["height"] = 175,
-	["justifyRight"] = false,
+	["enable"] = true,
+	["background"] = true,
+
 }
 
 C.loot = {
@@ -218,4 +219,6 @@ C.loot = {
 	rolllootframe = false,
 }
 
-
+C["error"] = {
+	["enable"] = true,
+}

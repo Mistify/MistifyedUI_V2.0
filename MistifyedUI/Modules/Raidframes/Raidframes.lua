@@ -23,7 +23,7 @@ P.RaidFrameAttributes = function()
 	"showParty", true,
 	"showRaid", true,
 	"showPlayer", true,
-	"showSolo", false, -- used to test raid frame without a party.
+	"showSolo", true, -- used to test raid frame without a party.
 	"xoffset", (6),
 	"yOffset", (-6),
 	"point", "LEFT",
@@ -156,7 +156,7 @@ RaidPosition:SetScript("OnEvent", function(self, event)
 	end
 
 	G.UnitFrames.RaidUnits:ClearAllPoints()
-	G.UnitFrames.RaidUnits:SetPoint("BOTTOMLEFT", TukuiInfoRight, "TOPLEFT", 2, 6)
+	G.UnitFrames.RaidUnits:SetPoint("LEFT", TukuiInfoRight, "TOPLEFT", 0, 50)
 end)
 
 
